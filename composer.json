@@ -1,0 +1,42 @@
+{
+  "name": "mygento/module-admin-inactivity",
+  "description": "Magento 2 Auto Lock admin users by inactivity period",
+  "type": "magento2-module",
+  "license": "OSL-3.0",
+  "authors": [{
+    "name": "Nikita Tarasov",
+    "email": "nikita@mygento.com"
+  }],
+  "keywords": [
+    "magento",
+    "magento2",
+    "mygento"
+  ],
+  "require": {
+    "magento/module-user": "101.2.*"
+  },
+  "require-dev": {
+    "mygento/coding-standard": "v2.4.x-dev"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Mygento\\AdminInactivity\\": ""
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repo.magento.com"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "magento/composer-dependency-version-audit-plugin": false,
+      "magento/magento-composer-installer": false,
+      "phpro/grumphp": true
+    }
+  }
+}

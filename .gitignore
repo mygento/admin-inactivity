@@ -1,0 +1,8 @@
+/nbproject
+/node_modules
+/.idea
+/vendor
+/composer.lock
+.DS_Store
+.php-cs-fixer.cache
+auth.json
