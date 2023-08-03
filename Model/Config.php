@@ -31,7 +31,8 @@ class Config
 
     public function getExcludeDomain(): ?string
     {
-        return trim($this->config->getValue(self::XML_EXCLUDE)) ?: null;
+        return $this->config->getValue(self::XML_EXCLUDE)
+            ? trim($this->config->getValue(self::XML_EXCLUDE)) : null;
     }
 
     public function getPeriod(): int

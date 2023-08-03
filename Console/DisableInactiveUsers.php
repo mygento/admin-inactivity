@@ -23,6 +23,7 @@ class DisableInactiveUsers extends Command
 
     public function __construct(Action $exec)
     {
+        parent::__construct();
         $this->exec = $exec;
     }
 
@@ -45,7 +46,7 @@ class DisableInactiveUsers extends Command
     /**
      * @inheritdoc
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this->setName(self::COMMAND_ADMIN_ACCOUNT_DISABLE);
         $this->setDescription(self::COMMAND_DESCRIPTION);
