@@ -56,7 +56,7 @@ class Action
     private function disableNotLogged(string $timestamp, ?string $exclude): void
     {
         $where = [
-            'logdate is ' => new Zend_Db_Expr('null'),
+            'logdate is ?' => new Zend_Db_Expr('null'),
             'created < ?' => $this->dateTime->formatDate($timestamp),
         ];
         if ($exclude !== null) {
